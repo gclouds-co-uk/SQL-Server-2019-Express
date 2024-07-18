@@ -194,14 +194,14 @@ Because SQL Express is installed then you will need to create a firewall rule fo
 <pre><code>New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
 New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
 </code></pre>
-
+<li>
 <div class="image-container">
     <img src="embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server" class="resized-image-40"> 
-</div> 
-
+</div> </li>
+<li>
 <div class="image-container">
     <img src="embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser" class="resized-image-25"> 
-</div> 
+</div> </li>
 
 <h2 id="connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</h2>
 
