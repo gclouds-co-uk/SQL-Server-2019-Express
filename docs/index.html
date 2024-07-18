@@ -121,12 +121,24 @@ that were issued after the release of SQL Server 2019 Cumulative Update 26, and 
 <h3 id="installation">Installation</h3>
 
 <ol>
-  <li><strong>Deploy the Image</strong>: Follow the instructions on the <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public">Google Cloud Platform Marketplace</a> to deploy the SQL Server 2019 Express image.</li>
-  <li><strong>Access the SQL Server as an Administrator</strong>: Once the deployment is complete, access your Windows Server instance using Remote Desktop Protocol (RDP) with an administrator user.
-  <br> ***Create a Windows administrator user on the server by setting a password.***
-  <img src="embedded_images/GCP_Console_reset_password.png" alt="GCP Compute Engine Console">
-  <img src="embedded_images/Set_new_Windows_password.png" alt="Set a new Windows password"></li>
-</ol>
+    <li><strong>Deploy the Image</strong>: Follow the instructions on the <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public">Google Cloud Platform Marketplace</a> to deploy the SQL Server 2019 Express image.</li>
+    <li><strong>Access the SQL Server as an Administrator</strong>: Once the deployment is complete, access your Windows Server instance using Remote Desktop Protocol (RDP) with an administrator user.
+    <br> ***Create a Windows administrator user on the server by setting a password.***
+    <div class="image-container"> <img src="images/GCP_Console_reset_password.png" alt="GCP Compute Engine Console" class="resized-image"></div>
+    <div class="image-container"> <img src="images/Set_new_Windows_password.png" alt="Set a new Windows password" class="resized-image"></div></li>
+  </ol>
+  
+  <style>
+    .image-container {
+      text-align: center; 
+    }
+  
+    .resized-image {
+      width: 50%; 
+      height: auto;
+      margin: 10px 0; /* Add some space between images */
+    }
+  </style>
 
 <h2 id="before-you-get-started">Before You Get Started</h2>
 <p>Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:</p>
