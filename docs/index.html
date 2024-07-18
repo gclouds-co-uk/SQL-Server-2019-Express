@@ -4,13 +4,13 @@
   <title>SQL Server 2019 Express on Windows Server 2019 Datacenter</title>
 </head>
 <body>
-<h1>SQL Server 2019 Express on Windows Server 2019 Datacenter</h1>
+<h1 id="sql-server-2019-express-on-windows-server-2019-datacenter">SQL Server 2019 Express on Windows Server 2019 Datacenter</h1>
 
-<h2>Quick Start Guide</h2>
+<h2 id="quick-start-guide">Quick Start Guide</h2>
 
 <p>Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide will help you get started with your new SQL Server Express instance on Google Cloud Platform</p>
 
-<h3>Table of Contents</h3>
+<h3 id="table-of-contents">Table of Contents</h3>
 <ul>
   <li><a href="#sql-server-2019-express-on-windows-server-2019-datacenter">SQL Server 2019 Express on Windows Server 2019 Datacenter</a>
     <ul>
@@ -46,11 +46,12 @@
   </li>
 </ul>
 
-<h3>Introduction</h3>
+<h3 id="introduction">Introduction</h3>
 
 <p>This guide provides step-by-step instructions to quick start with SQL Server 2019 Express on Windows Server 2019 Datacenter at Google Cloud Platform.
 You will have following within this bundle:</p>
-<h4>Key Features</h4>
+
+<h4 id="key-features">Key Features</h4>
 <table>
   <thead>
     <tr>
@@ -101,21 +102,23 @@ You will have following within this bundle:</p>
     </tr>
   </tbody>
 </table>
-<h4>SQL Patch Level</h4>
-<p>KB5037331 - Cumulative Update 27 for SQL Server 2019
-This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update">fixes</a> that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:</p>
+
+<h4 id="sql-patch-level">SQL Patch Level</h4>
+<p>KB5037331 - Cumulative Update 27 for SQL Server 2019<br>
+This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update">fixes</a> 
+that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:</p>
 
 <p>SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4</p>
 
 <p><a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27">Learn more</a></p>
 
-<h3>Prerequisites</h3>
+<h3 id="prerequisites">Prerequisites</h3>
 <ul>
   <li>A Google Cloud Platform account.</li>
   <li>Basic knowledge of SQL Server</li>
 </ul>
 
-<h3>Installation</h3>
+<h3 id="installation">Installation</h3>
 
 <ol>
   <li><strong>Deploy the Image</strong>: Follow the instructions on the <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public">Google Cloud Platform Marketplace</a> to deploy the SQL Server 2019 Express image.</li>
@@ -125,7 +128,7 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
   <img src="embedded_images/Set_new_Windows_password.png" alt="Set a new Windows password"></li>
 </ol>
 
-<h2>Before You Get Started</h2>
+<h2 id="before-you-get-started">Before You Get Started</h2>
 <p>Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:</p>
 <ul>
   <li>Set default port TCP/IP protocol for the named SQL Server instance</li>
@@ -133,10 +136,10 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
   <li>Create the necessary logins for SQL Server</li>
 </ul>
 
-<h3>Enabling TCP/IP Protocol</h3>
+<h3 id="enabling-tcpip-protocol">Enabling TCP/IP Protocol</h3>
 <p>TCP/IP server network protocol is required to connect to this SQL Server instance from a remote machine. This requires enabling TCP/IP protocol for the SQL Server service. It has been already enabled on the deployed server.</p>
 
-<h4>To set a TCP/IP port for a named instance:</h4>
+<h4 id="to-set-a-tcpip-port-for-a-named-instance">To set a TCP/IP port for a named instance:</h4>
 
 <ol>
   <li>In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration.</li>
@@ -147,11 +150,11 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
   <li>In the details pane, right-click SQL Server (<code>SQLEXPRESS</code>), and then click Restart, to stop and restart the SQL Server service.</li>
 </ol>
 
-<h3>Named Instance</h3>
-<p>A named instance of SQL Server ( <code><host name></code> \ <code>SQLEXPRESS</code>) uses dynamic ports.
+<h3 id="named-instance">Named Instance</h3>
+<p>A named instance of SQL Server ( <code><host name></code> \ <code>SQLEXPRESS</code>) uses dynamic ports.<br>
 Because SQL Express is installed then you will need to create a firewall rule for UDP port 1434 as this is the port required by named instances of SQL Server Browser Service to locate the instance on the host.</p>
 
-<h3>Firewall</h3>
+<h3 id="firewall">Firewall</h3>
 <p>To access an instance of the SQL Server through a firewall, you must configure the firewall on the computer that is running SQL Server to allow access. The firewall is a component of Microsoft Windows. You can also install a firewall from another company.</p>
 
 <p>You could use the <code>Powershell</code> to create the necessary exceptions to allow connections to the SQL Server instance.</p>
@@ -164,7 +167,7 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 <img src="embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server">
 <img src="embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser">
 
-<h2>Connecting to SQL Server via SSMS</h2>
+<h2 id="connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</h2>
 
 <ol>
   <li><strong>Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS on the server.
@@ -184,7 +187,7 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
   <img src="embedded_images/SSMS_Query.png" alt="SSMS Sample Query"></li>
 </ol>
 
-<h2>Connecting to SQL Server via sqlcmd</h2>
+<h2 id="connecting-to-sql-server-via-sqlcmd">Connecting to SQL Server via sqlcmd</h2>
 
 <ol>
   <li><strong>Open a command prompt.</strong>: Launch cmd on the server</li>
@@ -206,7 +209,7 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
   </code></pre></li>
 </ol>
 
-<h2>Authentication</h2>
+<h2 id="authentication">Authentication</h2>
 <p>As part of this packaged installation, the account running the SQL Server setup <code>BUILTIN\ADMINISTRATORS</code> has system administrator (sysadmin) privileges on the SQL Server. In case you need to add another Windows user as a system administrator, then this can be done using the following example.</p>
 
 <pre><code>CREATE LOGIN [<domainName>\<loginName>] FROM WINDOWS;
@@ -215,7 +218,7 @@ ALTER SERVER ROLE sysadmin ADD MEMBER [<domainName>\<loginName>];
 GO
 </code></pre>
 
-<h2>Testing the Installation</h2>
+<h2 id="testing-the-installation">Testing the Installation</h2>
 
 <p>To verify that SQL Server is running correctly, you can perform the following tests:</p>
 
