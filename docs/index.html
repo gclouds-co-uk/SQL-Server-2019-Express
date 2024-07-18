@@ -2,6 +2,29 @@
 <html>
 <head>
   <title>SQL Server 2019 Express on Windows Server 2019 Datacenter</title>
+  <style>
+    .image-container {
+      text-align: center; 
+    }
+  
+    .resized-image {
+      width: 50%; 
+      height: auto;
+      margin: 10px 0; /* Add some space between images */
+    }
+
+    .resized-image-40 {
+      width: 40%; 
+      height: auto;
+      margin: 10px 0; /* Add some space between images */
+    }
+
+    .resized-image-25 {
+      width: 25%; 
+      height: auto;
+      margin: 10px 0; /* Add some space between images */
+    }
+  </style>
 </head>
 <body>
 <h1 id="sql-server-2019-express-on-windows-server-2019-datacenter">SQL Server 2019 Express on Windows Server 2019 Datacenter</h1>
@@ -124,22 +147,10 @@ that were issued after the release of SQL Server 2019 Cumulative Update 26, and 
     <li><strong>Deploy the Image</strong>: Follow the instructions on the <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public">Google Cloud Platform Marketplace</a> to deploy the SQL Server 2019 Express image.</li>
     <li><strong>Access the SQL Server as an Administrator</strong>: Once the deployment is complete, access your Windows Server instance using Remote Desktop Protocol (RDP) with an administrator user.
     <br> ***Create a Windows administrator user on the server by setting a password.***
-    <div class="image-container"> <img src="images/GCP_Console_reset_password.png" alt="GCP Compute Engine Console" class="resized-image"></div>
-    <div class="image-container"> <img src="images/Set_new_Windows_password.png" alt="Set a new Windows password" class="resized-image"></div></li>
+    <div class="image-container"> <img src="embedded_images/GCP_Console_reset_password.png" alt="GCP Compute Engine Console" class="resized-image"></div>
+    <div class="image-container"> <img src="embedded_images/Set_new_Windows_password.png" alt="Set a new Windows password" class="resized-image-25"></div></li>
   </ol>
   
-  <style>
-    .image-container {
-      text-align: center; 
-    }
-  
-    .resized-image {
-      width: 50%; 
-      height: auto;
-      margin: 10px 0; /* Add some space between images */
-    }
-  </style>
-
 <h2 id="before-you-get-started">Before You Get Started</h2>
 <p>Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:</p>
 <ul>
@@ -154,13 +165,16 @@ that were issued after the release of SQL Server 2019 Cumulative Update 26, and 
 <h4 id="to-set-a-tcpip-port-for-a-named-instance">To set a TCP/IP port for a named instance:</h4>
 
 <ol>
-  <li>In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration.</li>
-  <li>In the console pane, click Protocols for <code>SQLEXPRESS</code>.</li>
-  <li>In the details pane, TCP/IP protocol properties, IP Addresses, IPAll TCP Port: <code>1433</code>
-  <img src="embedded_images/TCPport-1433.png" alt="Set a TCP/IP port"></li>
-  <li>In the console pane, click SQL Server Services.</li>
-  <li>In the details pane, right-click SQL Server (<code>SQLEXPRESS</code>), and then click Restart, to stop and restart the SQL Server service.</li>
-</ol>
+    <li>In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration.</li>
+    <li>In the console pane, click Protocols for <code>SQLEXPRESS</code>.</li>
+    <li>In the details pane, TCP/IP protocol properties, IP Addresses, IPAll TCP Port: <code>1433</code>
+      <div class="image-container">
+        <img src="embedded_images/TCPport-1433.png" alt="Set a TCP/IP port" class="resized-image-40"> 
+      </div> 
+    </li>
+    <li>In the console pane, click SQL Server Services.</li>
+    <li>In the details pane, right-click SQL Server (<code>SQLEXPRESS</code>), and then click Restart, to stop and restart the SQL Server service.</li>
+  </ol>
 
 <h3 id="named-instance">Named Instance</h3>
 <p>A named instance of SQL Server ( <code><host name></code> \ <code>SQLEXPRESS</code>) uses dynamic ports.<br>
@@ -176,19 +190,31 @@ Because SQL Express is installed then you will need to create a firewall rule fo
 <pre><code>New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
 New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
 </code></pre>
-<img src="embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server">
-<img src="embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser">
+
+<div class="image-container">
+    <img src="embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server" class="resized-image-40"> 
+</div> 
+
+<div class="image-container">
+    <img src="embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser" class="resized-image-25"> 
+</div> 
 
 <h2 id="connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</h2>
 
 <ol>
   <li><strong>Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS on the server.
-  <img src="embedded_images/SSMS_v20.1.png" alt="Launch SSMS"></li>
+    <div class="image-container">
+        <img src="embedded_images/SSMS_v20.1.png" alt="Launch SSMS" class="resized-image-25"> 
+    </div> 
+  </li>
   <li><strong>Connect to the Server</strong>:
     <ul>
       <li><strong>Server Name</strong>: Use the IP address or the hostname of your Windows Server instance.</li>
       <li><strong>Authentication</strong>: Choose the Windows Authentication method
-      <img src="embedded_images/SSMS_auth_admin_user.png" alt="SSMS Windows authentication"></li>
+        <div class="image-container">
+            <img src="embedded_images/SSMS_auth_admin_user.png" alt="SSMS Windows authentication" class="resized-image-25"> 
+        </div> 
+       </li>
     </ul>
   </li>
   <li><strong>Verify the Connection</strong>: Ensure that you can connect to the <code>SQLEXPRESS</code> instance</li>
@@ -196,7 +222,9 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
   <pre><code>SELECT name FROM sys.databases WHERE database_id <= 4;
   GO
   </code></pre>
-  <img src="embedded_images/SSMS_Query.png" alt="SSMS Sample Query"></li>
+  <div class="image-container">
+    <img src="embedded_images/SSMS_Query.png" alt="SSMS Sample Query" class="resized-image-25"> 
+</div> </li>
 </ol>
 
 <h2 id="connecting-to-sql-server-via-sqlcmd">Connecting to SQL Server via sqlcmd</h2>
