@@ -1,38 +1,44 @@
-layout: page  # Tells Jekyll to use the default page layout
-title: SQL Server 2019 Express on Windows Server 2019 Datacenter Quick Start Guide
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+# layout: page  # Tells Jekyll to use the default page layout
+# title: SQL Server 2019 Express on Windows Server 2019 Datacenter Quick Start Guide
 # SQL Server 2019 Express on Windows Server 2019 Datacenter
+layout: home
+title: Quick Start Guide
+---
 
 ## Quick Start Guide
 
-Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide will help you get started with your new SQL Server Express instance on Google Cloud Platform
+Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide will help you get started with your new SQL Server Express instance on Google Cloud Platform.
 
 ### Table of Contents
 
-- [SQL Server 2019 Express on Windows Server 2019 Datacenter](#sql-server-2019-express-on-windows-server-2019-datacenter)
-  - [Quick Start Guide](#quick-start-guide)
-    - [Table of Contents](#table-of-contents)
-    - [Introduction](#introduction)
-      - [Key Features](#key-features)
-      - [SQL Patch Level](#sql-patch-level)
-    - [Prerequisites](#prerequisites)
-    - [Installation](#installation)
-  - [Before You Get Started](#before-you-get-started)
-    - [Enabling TCP/IP Protocol](#enabling-tcpip-protocol)
-      - [To set a TCP/IP port for a named instance:](#to-set-a-tcpip-port-for-a-named-instance)
-    - [Named Instance](#named-instance)
-    - [Firewall](#firewall)
-  - [Connecting to SQL Server via SSMS](#connecting-to-sql-server-via-ssms)
-  - [Connecting to SQL Server via sqlcmd](#connecting-to-sql-server-via-sqlcmd)
-  - [Authentication](#authentication)
-  - [Testing the Installation](#testing-the-installation)
+- [Quick Start Guide](#quick-start-guide)
+  - [Table of Contents](#table-of-contents)
+  - [Introduction](#introduction)
+    - [Key Features](#key-features)
+    - [SQL Patch Level](#sql-patch-level)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Before You Get Started](#before-you-get-started)
+  - [Enabling TCP/IP Protocol](#enabling-tcpip-protocol)
+    - [To set a TCP/IP port for a named instance:](#to-set-a-tcpip-port-for-a-named-instance)
+  - [Named Instance](#named-instance)
+  - [Firewall](#firewall)
+- [Connecting to SQL Server via SSMS](#connecting-to-sql-server-via-ssms)
+- [Connecting to SQL Server via sqlcmd](#connecting-to-sql-server-via-sqlcmd)
+- [Authentication](#authentication)
+- [Testing the Installation](#testing-the-installation)
 
 ### Introduction
 
 This guide provides step-by-step instructions to quick start with SQL Server 2019 Express on Windows Server 2019 Datacenter at Google Cloud Platform.
 You will have following within this bundle:
+
 #### Key Features
-| Feature                      | Description                                          |
-|------------------------------|------------------------------------------------------|
+
+| **Feature**                      | **Description**                                  |
 | OS version                   | Microsoft Windows Server 2019 Datacenter (10.0.17763)|
 | SQL Package                  | Microsoft SQL Server 2019                            |
 | SQL Edition                  | Express                                              |
@@ -43,7 +49,9 @@ You will have following within this bundle:
 |                              | SQL Writer, SQL Client Connectivity SDK              |
 | Named Instance               | SQLEXPRESS                                           |
 | Clustered                    | No                                                   |
-| SSMS                         | 20.1
+| SSMS                         | 20.1                                                 |
+
+
 #### SQL Patch Level
 KB5037331 - Cumulative Update 27 for SQL Server 2019
 This update contains 13 [fixes](https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
@@ -59,7 +67,7 @@ SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4
 
 ### Installation
 
-1. **Deploy the Image**: Follow the instructions on the [Google Cloud Platform Marketplace](https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public) to deploy the SQL Server 2019 Express image.
+1. **Deploy the Image**: Follow the instructions on the [Google Cloud Platform Marketplace](https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter.endpoints.gclouds-public.cloud.goog) to deploy the SQL Server 2019 Express image.
 2. **Access the SQL Server as an Administrator**: Once the deployment is complete, access your Windows Server instance using Remote Desktop Protocol (RDP) with an administrator user.
 
  ***Create a Windows administrator user on the server by setting a password.***
@@ -99,8 +107,10 @@ An example of a command allowing the named instance TCP port of 1433 to be used 
 New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
 New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
 ```
+
 ![Firewall allowed apps SQL server](embedded_images/Firewall_allowed_apps.png)
 ![Firewall allowed apps SQL browser](embedded_images/Firewall_allowed_apps_sql_browser.png)
+
 ## Connecting to SQL Server via SSMS
 
 1. **Open SQL Server Management Studio (SSMS)**: Launch SSMS on the server.
@@ -108,10 +118,12 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 1. **Connect to the Server**:
    - **Server Name**: Use the IP address or the hostname of your Windows Server instance.
    - **Authentication**: Choose the Windows Authentication method
-   - ![SSMS Windows authentication](embedded_images/SSMS_auth_admin_user.png)
+   - **Encryption**: Choose Optional
+![SSMS Windows authentication](embedded_images/SSMS_auth_admin_user.png)
+
 2. **Verify the Connection**: Ensure that you can connect to the `SQLEXPRESS` instance
 3. **Execute a sample SQL Query**
-```cmd
+```sql
 SELECT name FROM sys.databases WHERE database_id <= 4;
 GO
 ```
@@ -123,12 +135,15 @@ GO
 2. **Change Directory.**: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn>
 3. **Run sqlcmd prompt**:Enter sqlcmd to start the SQL command-line tool. 
     At the sqlcmd prompt (1>), type the following query and press Enter:
-```cmd
+
+```sql
 SELECT name FROM sys.databases WHERE database_id <= 4;
 GO
 ```
+
 ***Output***
-```cmd
+
+```sql
 name                                                                                                                    
 --------------------------------
 master                                                                                                                  
@@ -138,6 +153,7 @@ msdb
 
 (4 rows affected)
 ```
+
 ## Authentication
 As part of this packaged installation, the account running the SQL Server setup `BUILTIN\ADMINISTRATORS` has system administrator (sysadmin) privileges on the SQL Server. In case you need to add another Windows user as a system administrator, then this can be done using the following example.
 
@@ -153,7 +169,8 @@ To verify that SQL Server is running correctly, you can perform the following te
 
 1. **Check SQL Server Services**: Ensure that the SQL Server is running. SQL Server Browser services is disabled.
 2. **Run a Simple Query**: Open SSMS and run a sample query to test the connection and functionality:
-   ```sqlcmd
-     SELECT @@VERSION
-     GO
-   ```
+
+```sql
+SELECT @@VERSION
+GO
+```
