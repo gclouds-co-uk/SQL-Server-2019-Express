@@ -28,6 +28,7 @@ url: "https://gclouds-co-uk.github.io" # the base hostname & protocol for your s
 twitter_username: gclouds2
 github_username:
 email: support@gclouds.co.uk
+markdown: kramdown
 # Build settings
 theme: minima
 plugins:
