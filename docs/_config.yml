@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Welcome to SQL Server 2019 Express on Google Cloud Platform! This guide will help you get started with your new SQL Server Express instance.
 domain: gclouds-co-uk.github.io
 baseurl: "/SQL-Server-2019-Express" # the subpath of your site, e.g. /blog
-url: "https://gclouds-co-uk.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://gclouds-co-uk.github.io/SQL-Server-2019-Express" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: gclouds2
 github_username:
 email: support@gclouds.co.uk

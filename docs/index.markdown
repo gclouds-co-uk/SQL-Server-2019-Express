@@ -6,7 +6,6 @@
 # SQL Server 2019 Express on Windows Server 2019 Datacenter
 layout: home
 title: Quick Start Guide
-permalink: /SQL-Server-2019-Express/
 ---
 
 ## Quick Start Guide
