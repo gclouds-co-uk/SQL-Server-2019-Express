@@ -131,7 +131,7 @@ GO
 
 ## Connecting to SQL Server via sqlcmd
 
-1. **Open a command prompt.**: Launch cmd on the server 
+1. **Open a command prompt.**: Launch cmd on the server as an Administrator.
 2. **Change Directory.**: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn>
 3. **Run sqlcmd prompt**:Enter sqlcmd to start the SQL command-line tool. 
     At the sqlcmd prompt (1>), type the following query and press Enter:
