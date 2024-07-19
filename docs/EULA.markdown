@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EULA
-permalink: /EULA/
+permalink: /SQL-Server-2019-Express/EULA/
 ---
 
 # End User License Agreement (EULA)
