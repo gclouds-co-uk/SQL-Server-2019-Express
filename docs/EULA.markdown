@@ -1,7 +1,7 @@
 ---
 layout: page
 title: EULA
-permalink: /EULA/
+permalink: /EULA
 ---
 
 # End User License Agreement (EULA)
