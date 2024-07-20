@@ -59,7 +59,7 @@ This update contains 13 [fixes](https://learn.microsoft.com/en-us/troubleshoot/s
 
 SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4
 
-[Learn more](https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27)
+<a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27" target="_blank">Learn more<img src="embedded_images/external_link.png" alt="cumulative_update27" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.
 
 ### Prerequisites
 
