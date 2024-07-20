@@ -6,7 +6,7 @@ permalink: /EULA
 
 # End User License Agreement (EULA)
 
-**Effective Date:** [19 July 2024]
+**Effective Date:** [20 July 2024]
 
 Thank you for selecting SQL Server 2019 Express, on Windows Server 2019 Datacenter ("Product") offered by gClouds ("Provider") through the Google Cloud Marketplace. We understand that trust is essential, and we are committed to building a transparent and positive relationship with our users. Here are some key points we want to emphasize:
 
