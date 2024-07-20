@@ -1,0 +1,708 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="EULA/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.29">
+    
+    
+      
+        <title>MS SQL Server 2019 Express</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.76a95c52.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sql-server-2019-express-edition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="MS SQL Server 2019 Express" class="md-header__button md-logo" aria-label="MS SQL Server 2019 Express" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            MS SQL Server 2019 Express
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SQL Server 2019 Express Edition
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="MS SQL Server 2019 Express" class="md-nav__button md-logo" aria-label="MS SQL Server 2019 Express" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    MS SQL Server 2019 Express
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    SQL Server 2019 Express Edition
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SQL Server 2019 Express Edition
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-technical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Technical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-deploy-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready-to-Deploy Virtual Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patched" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patched
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-level-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entry-Level Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-microsoft-sql-server-license-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Microsoft SQL Server License Cost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quickstart-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-engine-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Engine Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scale Limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="EULA/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EULA
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="quickstart-guide/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#key-technical-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Technical Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Technical Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ready-to-deploy-virtual-machine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ready-to-Deploy Virtual Machine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#patched" class="md-nav__link">
+    <span class="md-ellipsis">
+      Patched
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entry-level-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entry-Level Database
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-microsoft-sql-server-license-cost" class="md-nav__link">
+    <span class="md-ellipsis">
+      No Microsoft SQL Server License Cost
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quickstart-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quickstart Guide
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Features
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#database-engine-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database Engine Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scale-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scale Limits
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#management-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Management Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#development-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Development Tools
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#programmability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#updates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Updates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="sql-server-2019-express-edition">SQL Server 2019 Express Edition</h1>
+<p><strong>GCP Marketplace Solution: SQL Server 2019 Express on Windows Server 2019 Datacenter</strong></p>
+<div style="display: flex; align-items: center;">
+  <div style="flex: 1;">
+    Build small, data-driven web and mobile applications up to 10GB in size with this entry-level database.<br>
+    Express edition is the entry-level, free database and is ideal for learning and building desktop and small server data-driven applications.<br>
+    It is the best choice for independent software vendors, developers, and hobbyists building client applications.<br>
+  </div>
+  <div style="flex: 1; text-align: center;">
+    <img src="embedded_images/sql2019express_product_image.png" alt="MS SQL 2019 Express" style="max-width: 100%;">
+  </div>
+</div>
+
+<p><a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public" target="_blank"><img src="embedded_images/get_started_x200.png" alt="Get Started"></a></p>
+<h2 id="key-technical-features">Key Technical Features</h2>
+<h3 id="ready-to-deploy-virtual-machine">Ready-to-Deploy Virtual Machine</h3>
+<ul>
+<li>Easily deploy SQL Server 2019 Express Edition on Google Cloud Platform with a pre-configured virtual machine image.</li>
+<li>Streamlined setup process for quick deployment and implementation.</li>
+<li><a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public" target="_blank">Deploy confidently today<img src="embedded_images/external_link.png" alt="deploy" style="vertical-align: middle; width: 16px; height: 16px;" /></a>. and accelerate your projects with this efficient and cost-effective solution!</li>
+</ul>
+<h3 id="patched">Patched</h3>
+<ul>
+<li>Includes the latest SQL Cumulative Update patch for enhanced stability and security.</li>
+</ul>
+<h3 id="entry-level-database">Entry-Level Database</h3>
+<ul>
+<li>Designed for developers, independent software vendors (ISVs), and hobbyists to build and deploy small-scale applications.</li>
+</ul>
+<h3 id="no-microsoft-sql-server-license-cost">No Microsoft SQL Server License Cost</h3>
+<ul>
+<li>SQL Server Express edition incurs no licensing costs for Microsoft SQL Server itself, making it a cost-effective choice for small projects and applications. Note that while our GCP Marketplace product incurs charges, these do not include the cost of the SQL Server license.</li>
+</ul>
+<h3 id="quickstart-guide">Quickstart Guide</h3>
+<p>For detailed instructions on deploying and getting started with SQL Server 2019 Express Edition on Google Cloud Platform, please refer to our Quick Start Guide.</p>
+<p><a href="quickstart-guide/">Explore our Quick Start Guide for SQL Server 2019 Express Edition here.</a></p>
+<h2 id="features">Features</h2>
+<h3 id="database-engine-services">Database Engine Services</h3>
+<ul>
+<li>SQL Server Replication</li>
+<li>Machine Learning Services and Language Extensions</li>
+</ul>
+<h3 id="scale-limits">Scale Limits</h3>
+<p>For features supported by Developer edition, see features listed for the SQL Server Enterprise edition in the tables from <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16#scale-limits" target="_blank">here<img src="embedded_images/external_link.png" alt="scale_limits" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</p>
+<h3 id="management-tools">Management Tools</h3>
+<ul>
+<li>SQL Management Objects (SMO)</li>
+<li>SQL Assessment API</li>
+<li>SQL Vulnerability Assessment</li>
+<li>SQL Configuration Manager</li>
+<li>SQLCMD (Command Prompt tool)</li>
+</ul>
+<h3 id="development-tools">Development Tools</h3>
+<ul>
+<li>Microsoft Visual Studio integration</li>
+<li>Intellisense (Transact-SQL and MDX)</li>
+</ul>
+<h3 id="programmability">Programmability</h3>
+<ul>
+<li>Data Virtualization with PolyBase</li>
+<li>JSON</li>
+<li>Query Store</li>
+<li>Temporal</li>
+<li>Common Language Runtime (CLR) Integration</li>
+<li>Java Language Runtime Integration</li>
+</ul>
+<h3 id="updates">Updates</h3>
+<ul>
+<li>Most recent cumulative <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/download-and-install-latest-updates?toc=%2Fsql%2Ftoc.json&bc=%2Fsql%2Fbreadcrumb%2Ftoc.json&view=sql-server-ver16" target="_blank">updates<img src="embedded_images/external_link.png" alt="updates" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</li>
+</ul>
+<p>To learn more about the Microsoft™ product, please check the <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2019?view=sql-server-ver15" target="_blank">official website<img src="embedded_images/external_link.png" alt="official website" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
