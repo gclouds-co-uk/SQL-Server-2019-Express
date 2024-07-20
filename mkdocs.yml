@@ -1,3 +1,8 @@
 site_name: MS SQL Server 2019 Express
+repo_url: https://github.com/gclouds-co-uk/SQL-Server-2019-Express/
 theme:
   name: 'material'
+nav:
+  - 'index.markdown'
+  - 'quickstart-guide.markdown'
+  - 'EULA.markdown'
