@@ -5,12 +5,10 @@
 # title: SQL Server 2019 Express on Windows Server 2019 Datacenter Quick Start Guide
 # SQL Server 2019 Express on Windows Server 2019 Datacenter
 layout: home
-title: SQL Server 2019 Express on Windows Server 2019 Datacenter
+title: MS SQL Server 2019 Express
 ---
 
-# SQL Server 2019 Express Edition
-
-**GCP Marketplace Solution: SQL Server 2019 Express on Windows Server 2019 Datacenter**
+# GCP Marketplace Solution: SQL Server 2019 Express on Windows Server 2019 Datacenter
 
 <div style="display: flex; align-items: center;">
   <div style="flex: 1;">
@@ -44,7 +42,7 @@ title: SQL Server 2019 Express on Windows Server 2019 Datacenter
 ### Quickstart Guide
 For detailed instructions on deploying and getting started with SQL Server 2019 Express Edition on Google Cloud Platform, please refer to our Quick Start Guide.
 
-[Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](quickstart-guide.markdown)
+[Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](./quickstart-guide)
 
 ## Features
 
