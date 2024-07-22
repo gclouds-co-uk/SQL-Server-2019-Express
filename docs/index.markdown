@@ -44,7 +44,7 @@ For detailed instructions on deploying and getting started with SQL Server 2019 
 
 [Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](./quickstart-guide)
 
-If you're short on time, check out our [5-minute Quick Video Guide](https://youtu.be/vbtbOnyby7c) on our YouTube channel for a quick overview.
+If you're short on time, check out our [5-minute Quick Video Guide](https://youtu.be/vbtbOnyby7c) for a quick overview.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vbtbOnyby7c?si=3Eoa0TNf0Elr2Lza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 ## Features
 
