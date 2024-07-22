@@ -44,6 +44,9 @@ For detailed instructions on deploying and getting started with SQL Server 2019 
 
 [Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](./quickstart-guide)
 
+If you're short on time, check out our [5-minute Quick Video Guide](https://youtu.be/vbtbOnyby7c) on our YouTube channel for a quick overview.
+<iframe width="560" height="315" src="https://youtu.be/vbtbOnyby7c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Features
 
 ### Database Engine Services
@@ -52,10 +55,6 @@ For detailed instructions on deploying and getting started with SQL Server 2019 
 
 ### Scale Limits
 For features supported by Developer edition, see features listed for the SQL Server Enterprise edition in the tables from <a href="https://learn.microsoft.com/en-us/sql/sql-server/editions-and-components-of-sql-server-2022?view=sql-server-ver16#scale-limits" target="_blank">here<img src="embedded_images/external_link.png" alt="scale_limits" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.
-
-
-
-
 
 ### Management Tools
 - SQL Management Objects (SMO)
