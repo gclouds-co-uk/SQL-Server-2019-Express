@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Quick Start | MS SQL Server 2019 Express</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Quick Start" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="SQL Server 2019 Express on Google Cloud Platform! This guide will help you get started with your new SQL Server Express instance." />
+<meta property="og:description" content="SQL Server 2019 Express on Google Cloud Platform! This guide will help you get started with your new SQL Server Express instance." />
+<link rel="canonical" href="http://localhost:4000/SQL-Server-2019-Express/quickstart-guide" />
+<meta property="og:url" content="http://localhost:4000/SQL-Server-2019-Express/quickstart-guide" />
+<meta property="og:site_name" content="MS SQL Server 2019 Express" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Quick Start" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"SQL Server 2019 Express on Google Cloud Platform! This guide will help you get started with your new SQL Server Express instance.","headline":"Quick Start","url":"http://localhost:4000/SQL-Server-2019-Express/quickstart-guide"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/SQL-Server-2019-Express/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/SQL-Server-2019-Express/feed.xml" title="MS SQL Server 2019 Express" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/SQL-Server-2019-Express/">MS SQL Server 2019 Express</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/SQL-Server-2019-Express/EULA">EULA</a><a class="page-link" href="/SQL-Server-2019-Express/">MS SQL Server 2019 Express</a><a class="page-link" href="/SQL-Server-2019-Express/quickstart-guide">Quick Start</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Quick Start</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="quick-start-guide">Quick Start Guide</h2>
+
+<p>Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide will help you get started with your new SQL Server Express instance on Google Cloud Platform.</p>
+
+<h3 id="table-of-contents">Table of Contents</h3>
+
+<ul>
+  <li><a href="#quick-start-guide">Quick Start Guide</a>
+    <ul>
+      <li><a href="#table-of-contents">Table of Contents</a></li>
+      <li><a href="#introduction">Introduction</a>
+        <ul>
+          <li><a href="#key-features">Key Features</a></li>
+          <li><a href="#sql-patch-level">SQL Patch Level</a></li>
+        </ul>
+      </li>
+      <li><a href="#prerequisites">Prerequisites</a></li>
+      <li><a href="#installation">Installation</a></li>
+    </ul>
+  </li>
+  <li><a href="#before-you-get-started">Before You Get Started</a>
+    <ul>
+      <li><a href="#enabling-tcpip-protocol">Enabling TCP/IP Protocol</a>
+        <ul>
+          <li><a href="#to-set-a-tcpip-port-for-a-named-instance">To set a TCP/IP port for a named instance:</a></li>
+        </ul>
+      </li>
+      <li><a href="#named-instance">Named Instance</a></li>
+      <li><a href="#firewall">Firewall</a></li>
+    </ul>
+  </li>
+  <li><a href="#connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</a></li>
+  <li><a href="#connecting-to-sql-server-via-sqlcmd">Connecting to SQL Server via sqlcmd</a></li>
+  <li><a href="#authentication">Authentication</a></li>
+  <li><a href="#testing-the-installation">Testing the Installation</a></li>
+</ul>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>This guide provides step-by-step instructions to quick start with SQL Server 2019 Express on Windows Server 2019 Datacenter at Google Cloud Platform.
+You will have following within this bundle:</p>
+
+<h4 id="key-features">Key Features</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Feature</strong></td>
+      <td><strong>Description</strong></td>
+    </tr>
+    <tr>
+      <td>OS version</td>
+      <td>Microsoft Windows Server 2019 Datacenter (10.0.17763)</td>
+    </tr>
+    <tr>
+      <td>SQL Package</td>
+      <td>Microsoft SQL Server 2019</td>
+    </tr>
+    <tr>
+      <td>SQL Edition</td>
+      <td>Express</td>
+    </tr>
+    <tr>
+      <td>Type</td>
+      <td>RTM-CU27 (KB5037331)</td>
+    </tr>
+    <tr>
+      <td>Version</td>
+      <td>15.0.2000.5</td>
+    </tr>
+    <tr>
+      <td>Patch Level</td>
+      <td>15.0.4375.4</td>
+    </tr>
+    <tr>
+      <td>Features</td>
+      <td>Database Engine Services, SQL Browser</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>SQL Writer, SQL Client Connectivity SDK</td>
+    </tr>
+    <tr>
+      <td>Named Instance</td>
+      <td>SQLEXPRESS</td>
+    </tr>
+    <tr>
+      <td>Clustered</td>
+      <td>No</td>
+    </tr>
+    <tr>
+      <td>SSMS</td>
+      <td>20.1</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="sql-patch-level">SQL Patch Level</h4>
+<p>KB5037331 - Cumulative Update 27 for SQL Server 2019
+This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update">fixes</a> that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:</p>
+
+<p>SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4</p>
+
+<p><a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27" target="_blank">Learn more<img src="embedded_images/external_link.png" alt="cumulative_update27" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</p>
+
+<h3 id="prerequisites">Prerequisites</h3>
+
+<ul>
+  <li>A Google Cloud Platform account.</li>
+  <li>Basic knowledge of SQL Server</li>
+</ul>
+
+<h3 id="installation">Installation</h3>
+
+<ol>
+  <li><strong>Deploy the Image</strong>: Follow the instructions on the <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter.endpoints.gclouds-public.cloud.goog">Google Cloud Platform Marketplace</a> to deploy the SQL Server 2019 Express image.</li>
+  <li><strong>Access the SQL Server as an Administrator</strong>: Once the deployment is complete, access your Windows Server instance using Remote Desktop Protocol (RDP) with an administrator user.</li>
+</ol>
+
+<p><strong><em>Create a Windows administrator user on the server by setting a password.</em></strong>
+<img src="/SQL-Server-2019-Express/embedded_images/GCP_Console_reset_password.png" alt="GCP Compute Engine Console" />
+<img src="/SQL-Server-2019-Express/embedded_images/Set_new_Windows_password.png" alt="Set a new Windows password" /></p>
+
+<h2 id="before-you-get-started">Before You Get Started</h2>
+<p>Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:</p>
+<ul>
+  <li>Set default port TCP/IP protocol for the named SQL Server instance</li>
+  <li>Create firewall rules for the required ports</li>
+  <li>Create the necessary logins for SQL Server</li>
+</ul>
+
+<h3 id="enabling-tcpip-protocol">Enabling TCP/IP Protocol</h3>
+<p>TCP/IP server network protocol is required to connect to this SQL Server instance from a remote machine. This requires enabling TCP/IP protocol for the SQL Server service. It has been already enabled on the deployed server.</p>
+
+<h4 id="to-set-a-tcpip-port-for-a-named-instance">To set a TCP/IP port for a named instance:</h4>
+
+<ol>
+  <li>In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration.</li>
+  <li>In the console pane, click Protocols for <code class="language-plaintext highlighter-rouge">SQLEXPRESS</code>.</li>
+  <li>In the details pane, TCP/IP protocol properties, IP Addresses, IPAll TCP Port: <code class="language-plaintext highlighter-rouge">1433</code>
+<img src="/SQL-Server-2019-Express/embedded_images/TCPport-1433.png" alt="Set a TCP/IP port" /></li>
+  <li>In the console pane, click SQL Server Services.</li>
+  <li>In the details pane, right-click SQL Server (<code class="language-plaintext highlighter-rouge">SQLEXPRESS</code>), and then click Restart, to stop and restart the SQL Server service.</li>
+</ol>
+
+<h3 id="named-instance">Named Instance</h3>
+<p>A named instance of SQL Server ( <code class="language-plaintext highlighter-rouge">&lt;host name&gt; </code> \ <code class="language-plaintext highlighter-rouge">SQLEXPRESS</code>) uses dynamic ports.
+Because SQL Express is installed then you will need to create a firewall rule for UDP port 1434 as this is the port required by named instances of SQL Server Browser Service to locate the instance on the host.</p>
+
+<h3 id="firewall">Firewall</h3>
+<p>To access an instance of the SQL Server through a firewall, you must configure the firewall on the computer that is running SQL Server to allow access. The firewall is a component of Microsoft Windows. You can also install a firewall from another company.</p>
+
+<p>You could use the <code class="language-plaintext highlighter-rouge">Powershell</code> to create the necessary exceptions to allow connections to the SQL Server instance.</p>
+
+<p>An example of a command allowing the named instance TCP port of 1433 to be used is shown below.</p>
+
+<pre><code class="language-powersehll">New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
+New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
+</code></pre>
+
+<p><img src="/SQL-Server-2019-Express/embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server" />
+<img src="/SQL-Server-2019-Express/embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser" /></p>
+
+<h2 id="connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</h2>
+
+<ol>
+  <li><strong>Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS on the server.
+<img src="/SQL-Server-2019-Express/embedded_images/SSMS_v20.1.png" alt="Launch SSMS" /></li>
+  <li><strong>Connect to the Server</strong>:
+    <ul>
+      <li><strong>Server Name</strong>: Use the IP address or the hostname of your Windows Server instance.</li>
+      <li><strong>Authentication</strong>: Choose the Windows Authentication method</li>
+      <li><strong>Encryption</strong>: Choose Optional
+<img src="/SQL-Server-2019-Express/embedded_images/SSMS_auth_admin_user.png" alt="SSMS Windows authentication" /></li>
+    </ul>
+  </li>
+  <li><strong>Verify the Connection</strong>: Ensure that you can connect to the <code class="language-plaintext highlighter-rouge">SQLEXPRESS</code> instance</li>
+  <li><strong>Execute a sample SQL Query</strong>
+    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">databases</span> <span class="k">WHERE</span> <span class="n">database_id</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">GO</span>
+</code></pre></div>    </div>
+    <p><img src="/SQL-Server-2019-Express/embedded_images/SSMS_Query.png" alt="SSMS Sample Query" /></p>
+  </li>
+</ol>
+
+<h2 id="connecting-to-sql-server-via-sqlcmd">Connecting to SQL Server via sqlcmd</h2>
+
+<ol>
+  <li><strong>Open a command prompt.</strong>: Launch cmd on the server as an Administrator.</li>
+  <li><strong>Change Directory.</strong>: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn&gt;</li>
+  <li><strong>Run sqlcmd prompt</strong>:Enter sqlcmd to start the SQL command-line tool. 
+ At the sqlcmd prompt (1&gt;), type the following query and press Enter:</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">databases</span> <span class="k">WHERE</span> <span class="n">database_id</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">GO</span>
+</code></pre></div></div>
+
+<p><strong><em>Output</em></strong></p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span>                                                                                                                    
+<span class="c1">--------------------------------</span>
+<span class="n">master</span>                                                                                                                  
+<span class="n">tempdb</span>                                                                                                                  
+<span class="n">model</span>                                                                                                                   
+<span class="n">msdb</span>                                                                                                                    
+
+<span class="p">(</span><span class="mi">4</span> <span class="k">rows</span> <span class="n">affected</span><span class="p">)</span>
+</code></pre></div></div>
+
+<h2 id="authentication">Authentication</h2>
+<p>As part of this packaged installation, the account running the SQL Server setup <code class="language-plaintext highlighter-rouge">BUILTIN\ADMINISTRATORS</code> has system administrator (sysadmin) privileges on the SQL Server. In case you need to add another Windows user as a system administrator, then this can be done using the following example.</p>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="n">LOGIN</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">domainName</span><span class="o">&gt;</span><span class="err">\</span><span class="o">&lt;</span><span class="n">loginName</span><span class="o">&gt;</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">WINDOWS</span><span class="p">;</span>
+<span class="k">GO</span>
+<span class="k">ALTER</span> <span class="n">SERVER</span> <span class="k">ROLE</span> <span class="n">sysadmin</span> <span class="k">ADD</span> <span class="n">MEMBER</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">domainName</span><span class="o">&gt;</span><span class="err">\</span><span class="o">&lt;</span><span class="n">loginName</span><span class="o">&gt;</span><span class="p">];</span>
+<span class="k">GO</span>
+</code></pre></div></div>
+<h2 id="testing-the-installation">Testing the Installation</h2>
+
+<p>To verify that SQL Server is running correctly, you can perform the following tests:</p>
+
+<ol>
+  <li><strong>Check SQL Server Services</strong>: Ensure that the SQL Server is running. SQL Server Browser services is disabled.</li>
+  <li><strong>Run a Simple Query</strong>: Open SSMS and run a sample query to test the connection and functionality:</li>
+</ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="o">@@</span><span class="k">VERSION</span>
+<span class="k">GO</span>
+</code></pre></div></div>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/SQL-Server-2019-Express/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">MS SQL Server 2019 Express</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">MS SQL Server 2019 Express</li><li><a class="u-email" href="mailto:support@gclouds.co.uk">support@gclouds.co.uk</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://www.twitter.com/gclouds2"><svg class="svg-icon"><use xlink:href="/SQL-Server-2019-Express/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">gclouds2</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>SQL Server 2019 Express on Google Cloud Platform! This guide will help you get started with your new SQL Server Express instance.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
