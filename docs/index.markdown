@@ -21,14 +21,14 @@ title: MS SQL Server 2019 Express
   </div>
 </div>
 
-<a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public" target="_blank"><img src="embedded_images/get_started_x200.png" alt="Get Started"></a>
+<a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter" target="_blank"><img src="embedded_images/get_started_x200.png" alt="Get Started"></a>
 
 ## Key Technical Features
 
 ### Ready-to-Deploy Virtual Machine
 - Easily deploy SQL Server 2019 Express Edition on Google Cloud Platform with a pre-configured virtual machine image.
 - Streamlined setup process for quick deployment and implementation.
-- <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter?project=gclouds-public" target="_blank">Deploy confidently today<img src="embedded_images/external_link.png" alt="deploy" style="vertical-align: middle; width: 16px; height: 16px;" /></a>. and accelerate your projects with this efficient and cost-effective solution!
+- <a href="https://console.cloud.google.com/marketplace/product/gclouds-public/sql-server-2019-express-on-windows-server-2019-datacenter" target="_blank">Deploy confidently today<img src="embedded_images/external_link.png" alt="deploy" style="vertical-align: middle; width: 16px; height: 16px;" /></a>. and accelerate your projects with this efficient and cost-effective solution!
 
 ### Patched
 - Includes the latest SQL Cumulative Update patch for enhanced stability and security.
@@ -39,13 +39,22 @@ title: MS SQL Server 2019 Express
 ### No Microsoft SQL Server License Cost
 - SQL Server Express edition incurs no licensing costs for Microsoft SQL Server itself, making it a cost-effective choice for small projects and applications. Note that while our GCP Marketplace product incurs charges, these do not include the cost of the SQL Server license.
 
-### Quickstart Guide
+## Quickstart Guide
 For detailed instructions on deploying and getting started with SQL Server 2019 Express Edition on Google Cloud Platform, please refer to our Quick Start Guide.
 
 [Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](./quickstart-guide)
 
 If you're short on time, check out our [5-minute Quick Video Guide](https://youtu.be/vbtbOnyby7c) for a quick overview.
 <iframe width="560" height="315" src="https://www.youtube.com/embed/vbtbOnyby7c?si=3Eoa0TNf0Elr2Lza" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Command Line Deployment via Terraform
+
+For those who prefer deploying via the command line, we provide a Terraform module that simplifies the process.
+
+### Using the Terraform Module
+
+This <a href="https://github.com/gclouds-co-uk/SQL-Server-2019-Express/tree/main/example/terraform" target="_blank">terraform module<img src="embedded_images/external_link.png" alt="deploy" style="vertical-align: middle; width: 16px; height: 16px;" /></a> deploys the product from Google Cloud Marketplace.
+ 
 ## Features
 
 ### Database Engine Services
