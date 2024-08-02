@@ -39,7 +39,7 @@ title: MS SQL Server 2019 Express
 ### No Microsoft SQL Server License Cost
 - SQL Server Express edition incurs no licensing costs for Microsoft SQL Server itself, making it a cost-effective choice for small projects and applications. Note that while our GCP Marketplace product incurs charges, these do not include the cost of the SQL Server license.
 
-## Quickstart Guide
+### Quickstart Guide
 For detailed instructions on deploying and getting started with SQL Server 2019 Express Edition on Google Cloud Platform, please refer to our Quick Start Guide.
 
 [Explore our Quick Start Guide for SQL Server 2019 Express Edition here.](./quickstart-guide)
