@@ -12,7 +12,7 @@ variable "goog_cm_deployment_name" {
 variable "source_image" {
   description = "The image name for the disk for the VM instance."
   type        = string
-  default     = "projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1721319828"
+  default     = "projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1735471171"
 }
 
 variable "zone" {
