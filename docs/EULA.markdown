@@ -2,6 +2,7 @@
 layout: page
 title: EULA
 permalink: /EULA
+order: 4
 ---
 
 # End User License Agreement (EULA)

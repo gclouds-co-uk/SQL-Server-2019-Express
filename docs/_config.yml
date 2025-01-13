@@ -34,6 +34,11 @@ theme: minima
 plugins:
   - jekyll-feed
 
+header_pages:
+  - index.markdown
+  - quickstart-guide.markdown
+  - release_notes.markdown
+  - EULA.markdown
 
 # Exclude from processing.
 # The following items will not be processed, by default.

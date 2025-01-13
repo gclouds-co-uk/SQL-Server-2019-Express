@@ -7,8 +7,8 @@
 layout: page
 title: Quick Start
 permalink: /quickstart-guide
+order: 2
 ---
-
 ## Quick Start Guide
 
 Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide will help you get started with your new SQL Server Express instance on Google Cloud Platform.
@@ -20,6 +20,7 @@ Welcome to SQL Server 2019 Express on Windows Server 2019 Datacenter! This guide
   - [Introduction](#introduction)
     - [Key Features](#key-features)
     - [SQL Patch Level](#sql-patch-level)
+    - [Microsoft OS Patch Level](#microsoft-os-patch-level)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
 - [Before You Get Started](#before-you-get-started)
@@ -39,27 +40,40 @@ You will have following within this bundle:
 
 #### Key Features
 
-| **Feature**                      | **Description**                                  |
-| OS version                   | Microsoft Windows Server 2019 Datacenter (10.0.17763)|
+| **Feature**                  | **Description**                                      |
+| OS version                   | Microsoft Windows Server 2019 Datacenter             |
 | SQL Package                  | Microsoft SQL Server 2019                            |
 | SQL Edition                  | Express                                              |
-| Type                         | RTM-CU27 (KB5037331)                                 |
+| Type                         | RTM-CU30 (KB5049235)                                 |
 | Version                      | 15.0.2000.5                                          |
-| Patch Level                  | 15.0.4375.4                                          |
+| Patch Level                  | 15.0.4415.2                                          |
 | Features                     | Database Engine Services, SQL Browser                |
 |                              | SQL Writer, SQL Client Connectivity SDK              |
 | Named Instance               | SQLEXPRESS                                           |
 | Clustered                    | No                                                   |
 | SSMS                         | 20.1                                                 |
 
-
 #### SQL Patch Level
-KB5037331 - Cumulative Update 27 for SQL Server 2019
-This update contains 13 [fixes](https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update) that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:
 
-SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4
+KB5049235 - Cumulative Update 30 for SQL Server 2019
+This update contains 8 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30#improvements-and-fixes-included-in-this-update" target="_blank">fixes <img src="embedded_images/external_link.png" alt="CU30fixes" style="vertical-align: middle; width: 16px; height: 16px;" /></a> that were issued after the release of SQL Server 2019 Cumulative Update 29, and it updates components in the following builds:
 
-<a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27" target="_blank">Learn more<img src="embedded_images/external_link.png" alt="cumulative_update27" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.
+
+- SQL Server - Product version: 15.0.4415.2, file version: 2019.150.4415.2
+- Analysis Services - Product version: 15.0.35.51, file version: 2018.150.35.51
+
+<a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30" target="_blank">`Learn more`<img src="embedded_images/external_link.png" alt="cumulative_update30" style="vertical-align: middle; width: 16px; height: 16px;" /></a>
+
+#### Microsoft OS Patch Level
+
+**KB2267602** - Security Intelligence Update  
+This update provides the latest security intelligence to enhance threat protection for Microsoft Defender Antivirus and other Microsoft antimalware. Updated components include advanced threat intelligence and vulnerability fixes issued after the prior update release.
+
+- **Release date:** December 29, 2024  
+- **Component version:** 1.421.1073.0
+
+For additional details visit the <a href="https://www.microsoft.com/en-us/wdsi/definitions/antimalware-definition-release-notes" target="_blank">Microsoft Security Intelligence Updates page<img src="embedded_images/external_link.png" alt="MSsecuritypage" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.
+
 
 ### Prerequisites
 
@@ -76,12 +90,15 @@ SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4
 ![Set a new Windows password](embedded_images/Set_new_Windows_password.png)
 
 ## Before You Get Started
+
 Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:
+
 - Set default port TCP/IP protocol for the named SQL Server instance
 - Create firewall rules for the required ports
 - Create the necessary logins for SQL Server
 
 ### Enabling TCP/IP Protocol
+
 TCP/IP server network protocol is required to connect to this SQL Server instance from a remote machine. This requires enabling TCP/IP protocol for the SQL Server service. It has been already enabled on the deployed server.
 
 #### To set a TCP/IP port for a named instance:
@@ -89,25 +106,18 @@ TCP/IP server network protocol is required to connect to this SQL Server instanc
 1. In SQL Server Configuration Manager, in the console pane, expand SQL Server Network Configuration.
 2. In the console pane, click Protocols for `SQLEXPRESS`.
 3. In the details pane, TCP/IP protocol properties, IP Addresses, IPAll TCP Port: `1433`
-![Set a TCP/IP port](embedded_images/TCPport-1433.png)
-1. In the console pane, click SQL Server Services.
-2. In the details pane, right-click SQL Server (`SQLEXPRESS`), and then click Restart, to stop and restart the SQL Server service.
+   ![Set a TCP/IP port](embedded_images/TCPport-1433.png)
+4. In the console pane, click SQL Server Services.
+5. In the details pane, right-click SQL Server (`SQLEXPRESS`), and then click Restart, to stop and restart the SQL Server service.
 
 ### Named Instance
+
 A named instance of SQL Server ( `<host name> ` \ `SQLEXPRESS`) uses dynamic ports.
 Because SQL Express is installed then you will need to create a firewall rule for UDP port 1434 as this is the port required by named instances of SQL Server Browser Service to locate the instance on the host.
 
 ### Firewall
-To access an instance of the SQL Server through a firewall, you must configure the firewall on the computer that is running SQL Server to allow access. The firewall is a component of Microsoft Windows. You can also install a firewall from another company.
 
-You could use the `Powershell` to create the necessary exceptions to allow connections to the SQL Server instance.
-
-An example of a command allowing the named instance TCP port of 1433 to be used is shown below.
-
-```powersehll
-New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
-New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
-```
+Inbound firewall rules have been pre-configured on the deployed Microsoft OS to enable seamless access to the SQL Server instance. These rules allow traffic on TCP port 1433 for SQL Server and UDP port 1434 for the SQL Server Browser service.
 
 ![Firewall allowed apps SQL server](embedded_images/Firewall_allowed_apps.png)
 ![Firewall allowed apps SQL browser](embedded_images/Firewall_allowed_apps_sql_browser.png)
@@ -115,27 +125,29 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 ## Connecting to SQL Server via SSMS
 
 1. **Open SQL Server Management Studio (SSMS)**: Launch SSMS on the server as an **Administrator**.
-![Launch SSMS](embedded_images/SSMS_v20.1.png)
-1. **Connect to the Server**:
+   ![Launch SSMS](embedded_images/SSMS_v20.1.png)
+2. **Connect to the Server**:
+
    - **Server Name**: Use the IP address or the hostname of your Windows Server instance.
    - **Authentication**: Choose the Windows Authentication method
    - **Encryption**: Choose Optional
-![SSMS Windows authentication](embedded_images/SSMS_auth_admin_user.png)
+     ![SSMS Windows authentication](embedded_images/SSMS_auth_admin_user.png)
+3. **Verify the Connection**: Ensure that you can connect to the `SQLEXPRESS` instance
+4. **Execute a sample SQL Query**
 
-2. **Verify the Connection**: Ensure that you can connect to the `SQLEXPRESS` instance
-3. **Execute a sample SQL Query**
 ```sql
 SELECT name FROM sys.databases WHERE database_id <= 4;
 GO
 ```
+
 ![SSMS Sample Query](embedded_images/SSMS_Query.png)
 
 ## Connecting to SQL Server via sqlcmd
 
 1. **Open a command prompt.**: Launch cmd on the server as an **Administrator**.
 2. **Change Directory.**: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn>
-3. **Run sqlcmd prompt**:Enter sqlcmd to start the SQL command-line tool. 
-    At the sqlcmd prompt (1>), type the following query and press Enter:
+3. **Run sqlcmd prompt**:Enter sqlcmd to start the SQL command-line tool.
+   At the sqlcmd prompt (1>), type the following query and press Enter:
 
 ```sql
 SELECT name FROM sys.databases WHERE database_id <= 4;
@@ -145,17 +157,18 @@ GO
 ***Output***
 
 ```sql
-name                                                                                                                    
+name                                                                                                                  
 --------------------------------
-master                                                                                                                  
-tempdb                                                                                                                  
-model                                                                                                                   
-msdb                                                                                                                    
+master                                                                                                                
+tempdb                                                                                                                
+model                                                                                                                 
+msdb                                                                                                                  
 
 (4 rows affected)
 ```
 
 ## Authentication
+
 As part of this packaged installation, the account running the SQL Server setup `BUILTIN\ADMINISTRATORS` has system administrator (sysadmin) privileges on the SQL Server. In case you need to add another Windows user as a system administrator, then this can be done using the following example.
 
 ```sql
@@ -164,6 +177,7 @@ GO
 ALTER SERVER ROLE sysadmin ADD MEMBER [<domainName>\<loginName>];
 GO
 ```
+
 ## Testing the Installation
 
 To verify that SQL Server is running correctly, you can perform the following tests:
