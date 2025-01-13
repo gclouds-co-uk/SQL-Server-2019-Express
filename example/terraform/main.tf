@@ -12,6 +12,10 @@ locals {
 
   metadata = {
     product = "ms-sql-server-2019-express"
+    os = "windows2019dc"
+    sqlserver = "2019express"
+    sql-patch = "cu30"
+    release = "2025Q1"
     google-logging-enable = "0"
     google-monitoring-enable = "0"
   }
