@@ -31,7 +31,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/SQL-Server-2019-Express/EULA">EULA</a><a class="page-link" href="/SQL-Server-2019-Express/">MS SQL Server 2019 Express</a><a class="page-link" href="/SQL-Server-2019-Express/quickstart-guide">Quick Start</a></div>
+        <div class="trigger"><a class="page-link" href="/SQL-Server-2019-Express/">MS SQL Server 2019 Express</a><a class="page-link" href="/SQL-Server-2019-Express/quickstart-guide">Quick Start</a><a class="page-link" href="/SQL-Server-2019-Express/release-notes">Release Notes</a><a class="page-link" href="/SQL-Server-2019-Express/EULA">EULA</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -57,6 +57,7 @@
         <ul>
           <li><a href="#key-features">Key Features</a></li>
           <li><a href="#sql-patch-level">SQL Patch Level</a></li>
+          <li><a href="#microsoft-os-patch-level">Microsoft OS Patch Level</a></li>
         </ul>
       </li>
       <li><a href="#prerequisites">Prerequisites</a></li>
@@ -95,7 +96,7 @@ You will have following within this bundle:</p>
     </tr>
     <tr>
       <td>OS version</td>
-      <td>Microsoft Windows Server 2019 Datacenter (10.0.17763)</td>
+      <td>Microsoft Windows Server 2019 Datacenter</td>
     </tr>
     <tr>
       <td>SQL Package</td>
@@ -107,7 +108,7 @@ You will have following within this bundle:</p>
     </tr>
     <tr>
       <td>Type</td>
-      <td>RTM-CU27 (KB5037331)</td>
+      <td>RTM-CU30 (KB5049235)</td>
     </tr>
     <tr>
       <td>Version</td>
@@ -115,7 +116,7 @@ You will have following within this bundle:</p>
     </tr>
     <tr>
       <td>Patch Level</td>
-      <td>15.0.4375.4</td>
+      <td>15.0.4415.2</td>
     </tr>
     <tr>
       <td>Features</td>
@@ -141,12 +142,28 @@ You will have following within this bundle:</p>
 </table>
 
 <h4 id="sql-patch-level">SQL Patch Level</h4>
-<p>KB5037331 - Cumulative Update 27 for SQL Server 2019
-This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27#improvements-and-fixes-included-in-this-update">fixes</a> that were issued after the release of SQL Server 2019 Cumulative Update 26, and it updates components in the following builds:</p>
 
-<p>SQL Server - Product version: 15.0.4375.4, file version: 2019.150.4375.4</p>
+<p>KB5049235 - Cumulative Update 30 for SQL Server 2019
+This update contains 8 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30#improvements-and-fixes-included-in-this-update" target="_blank">fixes <img src="embedded_images/external_link.png" alt="CU30fixes" style="vertical-align: middle; width: 16px; height: 16px;" /></a> that were issued after the release of SQL Server 2019 Cumulative Update 29, and it updates components in the following builds:</p>
 
-<p><a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate27" target="_blank">Learn more<img src="embedded_images/external_link.png" alt="cumulative_update27" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</p>
+<ul>
+  <li>SQL Server - Product version: 15.0.4415.2, file version: 2019.150.4415.2</li>
+  <li>Analysis Services - Product version: 15.0.35.51, file version: 2018.150.35.51</li>
+</ul>
+
+<p><a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30" target="_blank"><code class="language-plaintext highlighter-rouge">Learn more</code><img src="embedded_images/external_link.png" alt="cumulative_update30" style="vertical-align: middle; width: 16px; height: 16px;" /></a></p>
+
+<h4 id="microsoft-os-patch-level">Microsoft OS Patch Level</h4>
+
+<p><strong>KB2267602</strong> - Security Intelligence Update<br />
+This update provides the latest security intelligence to enhance threat protection for Microsoft Defender Antivirus and other Microsoft antimalware. Updated components include advanced threat intelligence and vulnerability fixes issued after the prior update release.</p>
+
+<ul>
+  <li><strong>Release date:</strong> December 29, 2024</li>
+  <li><strong>Component version:</strong> 1.421.1073.0</li>
+</ul>
+
+<p>For additional details visit the <a href="https://www.microsoft.com/en-us/wdsi/definitions/antimalware-definition-release-notes" target="_blank">Microsoft Security Intelligence Updates page<img src="embedded_images/external_link.png" alt="MSsecuritypage" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.</p>
 
 <h3 id="prerequisites">Prerequisites</h3>
 
@@ -167,7 +184,9 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
 <img src="/SQL-Server-2019-Express/embedded_images/Set_new_Windows_password.png" alt="Set a new Windows password" /></p>
 
 <h2 id="before-you-get-started">Before You Get Started</h2>
+
 <p>Before you can connect to your SQL Server instance from another machine, you will need to complete the following tasks:</p>
+
 <ul>
   <li>Set default port TCP/IP protocol for the named SQL Server instance</li>
   <li>Create firewall rules for the required ports</li>
@@ -175,6 +194,7 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
 </ul>
 
 <h3 id="enabling-tcpip-protocol">Enabling TCP/IP Protocol</h3>
+
 <p>TCP/IP server network protocol is required to connect to this SQL Server instance from a remote machine. This requires enabling TCP/IP protocol for the SQL Server service. It has been already enabled on the deployed server.</p>
 
 <h4 id="to-set-a-tcpip-port-for-a-named-instance">To set a TCP/IP port for a named instance:</h4>
@@ -189,19 +209,13 @@ This update contains 13 <a href="https://learn.microsoft.com/en-us/troubleshoot/
 </ol>
 
 <h3 id="named-instance">Named Instance</h3>
+
 <p>A named instance of SQL Server ( <code class="language-plaintext highlighter-rouge">&lt;host name&gt; </code> \ <code class="language-plaintext highlighter-rouge">SQLEXPRESS</code>) uses dynamic ports.
 Because SQL Express is installed then you will need to create a firewall rule for UDP port 1434 as this is the port required by named instances of SQL Server Browser Service to locate the instance on the host.</p>
 
 <h3 id="firewall">Firewall</h3>
-<p>To access an instance of the SQL Server through a firewall, you must configure the firewall on the computer that is running SQL Server to allow access. The firewall is a component of Microsoft Windows. You can also install a firewall from another company.</p>
 
-<p>You could use the <code class="language-plaintext highlighter-rouge">Powershell</code> to create the necessary exceptions to allow connections to the SQL Server instance.</p>
-
-<p>An example of a command allowing the named instance TCP port of 1433 to be used is shown below.</p>
-
-<pre><code class="language-powersehll">New-NetFirewallRule -DisplayName "SQLServer SQLEXPRESS named instance" -Direction Inbound -LocalPort 1433 -Protocol TCP -Action Allow
-New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound -LocalPort 1434 -Protocol UDP -Action Allow
-</code></pre>
+<p>Inbound firewall rules have been pre-configured on the deployed Microsoft OS to enable seamless access to the SQL Server instance. These rules allow traffic on TCP port 1433 for SQL Server and UDP port 1434 for the SQL Server Browser service.</p>
 
 <p><img src="/SQL-Server-2019-Express/embedded_images/Firewall_allowed_apps.png" alt="Firewall allowed apps SQL server" />
 <img src="/SQL-Server-2019-Express/embedded_images/Firewall_allowed_apps_sql_browser.png" alt="Firewall allowed apps SQL browser" /></p>
@@ -209,9 +223,11 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 <h2 id="connecting-to-sql-server-via-ssms">Connecting to SQL Server via SSMS</h2>
 
 <ol>
-  <li><strong>Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS on the server.
+  <li><strong>Open SQL Server Management Studio (SSMS)</strong>: Launch SSMS on the server as an <strong>Administrator</strong>.
 <img src="/SQL-Server-2019-Express/embedded_images/SSMS_v20.1.png" alt="Launch SSMS" /></li>
-  <li><strong>Connect to the Server</strong>:
+  <li>
+    <p><strong>Connect to the Server</strong>:</p>
+
     <ul>
       <li><strong>Server Name</strong>: Use the IP address or the hostname of your Windows Server instance.</li>
       <li><strong>Authentication</strong>: Choose the Windows Authentication method</li>
@@ -220,21 +236,22 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
     </ul>
   </li>
   <li><strong>Verify the Connection</strong>: Ensure that you can connect to the <code class="language-plaintext highlighter-rouge">SQLEXPRESS</code> instance</li>
-  <li><strong>Execute a sample SQL Query</strong>
-    <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">databases</span> <span class="k">WHERE</span> <span class="n">database_id</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span>
-<span class="k">GO</span>
-</code></pre></div>    </div>
-    <p><img src="/SQL-Server-2019-Express/embedded_images/SSMS_Query.png" alt="SSMS Sample Query" /></p>
-  </li>
+  <li><strong>Execute a sample SQL Query</strong></li>
 </ol>
+
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">databases</span> <span class="k">WHERE</span> <span class="n">database_id</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span>
+<span class="k">GO</span>
+</code></pre></div></div>
+
+<p><img src="/SQL-Server-2019-Express/embedded_images/SSMS_Query.png" alt="SSMS Sample Query" /></p>
 
 <h2 id="connecting-to-sql-server-via-sqlcmd">Connecting to SQL Server via sqlcmd</h2>
 
 <ol>
-  <li><strong>Open a command prompt.</strong>: Launch cmd on the server as an Administrator.</li>
+  <li><strong>Open a command prompt.</strong>: Launch cmd on the server as an <strong>Administrator</strong>.</li>
   <li><strong>Change Directory.</strong>: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn&gt;</li>
-  <li><strong>Run sqlcmd prompt</strong>:Enter sqlcmd to start the SQL command-line tool. 
- At the sqlcmd prompt (1&gt;), type the following query and press Enter:</li>
+  <li><strong>Run sqlcmd prompt</strong>:Enter sqlcmd to start the SQL command-line tool.
+At the sqlcmd prompt (1&gt;), type the following query and press Enter:</li>
 </ol>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">SELECT</span> <span class="n">name</span> <span class="k">FROM</span> <span class="n">sys</span><span class="p">.</span><span class="n">databases</span> <span class="k">WHERE</span> <span class="n">database_id</span> <span class="o">&lt;=</span> <span class="mi">4</span><span class="p">;</span>
@@ -243,17 +260,18 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 
 <p><strong><em>Output</em></strong></p>
 
-<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span>                                                                                                                    
+<div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">name</span>                                                                                                                  
 <span class="c1">--------------------------------</span>
-<span class="n">master</span>                                                                                                                  
-<span class="n">tempdb</span>                                                                                                                  
-<span class="n">model</span>                                                                                                                   
-<span class="n">msdb</span>                                                                                                                    
+<span class="n">master</span>                                                                                                                
+<span class="n">tempdb</span>                                                                                                                
+<span class="n">model</span>                                                                                                                 
+<span class="n">msdb</span>                                                                                                                  
 
 <span class="p">(</span><span class="mi">4</span> <span class="k">rows</span> <span class="n">affected</span><span class="p">)</span>
 </code></pre></div></div>
 
 <h2 id="authentication">Authentication</h2>
+
 <p>As part of this packaged installation, the account running the SQL Server setup <code class="language-plaintext highlighter-rouge">BUILTIN\ADMINISTRATORS</code> has system administrator (sysadmin) privileges on the SQL Server. In case you need to add another Windows user as a system administrator, then this can be done using the following example.</p>
 
 <div class="language-sql highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">CREATE</span> <span class="n">LOGIN</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">domainName</span><span class="o">&gt;</span><span class="err">\</span><span class="o">&lt;</span><span class="n">loginName</span><span class="o">&gt;</span><span class="p">]</span> <span class="k">FROM</span> <span class="n">WINDOWS</span><span class="p">;</span>
@@ -261,6 +279,7 @@ New-NetFirewallRule -DisplayName "SQLServer Browser service" -Direction Inbound 
 <span class="k">ALTER</span> <span class="n">SERVER</span> <span class="k">ROLE</span> <span class="n">sysadmin</span> <span class="k">ADD</span> <span class="n">MEMBER</span> <span class="p">[</span><span class="o">&lt;</span><span class="n">domainName</span><span class="o">&gt;</span><span class="err">\</span><span class="o">&lt;</span><span class="n">loginName</span><span class="o">&gt;</span><span class="p">];</span>
 <span class="k">GO</span>
 </code></pre></div></div>
+
 <h2 id="testing-the-installation">Testing the Installation</h2>
 
 <p>To verify that SQL Server is running correctly, you can perform the following tests:</p>

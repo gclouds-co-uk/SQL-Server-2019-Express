@@ -14,7 +14,7 @@ terraform plan --var-file marketplace_test.tfvars --var project_id=<YOUR_PROJECT
 |------|-------------|------|---------|----------|
 | project_id | The ID of the project in which to provision resources. | `string` | `null` | yes |
 | goog_cm_deployment_name | The name of the deployment and VM instance. | `string` | `null` | yes |
-| source_image | The image name for the disk for the VM instance. | `string` | `"projects/gclouds-public/global/images/gclouds-win2019-sql2019-exp-1721319828"` | no |
+| source_image | The image name for the disk for the VM instance. | `string` | `"projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1735471171"` | no |
 | zone | The zone for the solution to be deployed. | `string` | `"us-east1-c"` | no |
 | machine_type | The machine type to create, e.g. e2-small | `string` | `"n2d-standard-4"` | no |
 | boot_disk_type | The boot disk type for the VM instance. | `string` | `"pd-ssd"` | no |
