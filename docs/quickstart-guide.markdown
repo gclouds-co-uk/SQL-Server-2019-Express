@@ -147,6 +147,13 @@ GO
 1. **Open a command prompt.**: Launch cmd on the server as an **Administrator**.
 2. **Change Directory.**: C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn>
 3. **Run sqlcmd prompt**:Enter sqlcmd to start the SQL command-line tool.
+
+```plaintext
+⚠️ Note:
+When you use sqlcmd without specifying a port or instance name, it tries to connect to the default instance on port 1433.
+If SQL Server Express is not configured to use port 1433 (the typical case), this connection attempt will fail.
+```
+
    At the sqlcmd prompt (1>), type the following query and press Enter:
 
 ```sql
