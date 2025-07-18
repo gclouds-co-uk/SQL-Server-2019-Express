@@ -44,9 +44,9 @@ You will have following within this bundle:
 | OS version                   | Microsoft Windows Server 2019 Datacenter             |
 | SQL Package                  | Microsoft SQL Server 2019                            |
 | SQL Edition                  | Express                                              |
-| Type                         | RTM-CU30 (KB5049235)                                 |
+| Type                         | RTM-CU32 (KB5054833)                                 |
 | Version                      | 15.0.2000.5                                          |
-| Patch Level                  | 15.0.4415.2                                          |
+| Patch Level                  | 15.0.4430.1                                          |
 | Features                     | Database Engine Services, SQL Browser                |
 |                              | SQL Writer, SQL Client Connectivity SDK              |
 | Named Instance               | SQLEXPRESS                                           |
@@ -55,24 +55,18 @@ You will have following within this bundle:
 
 #### SQL Patch Level
 
-KB5049235 - Cumulative Update 30 for SQL Server 2019
-This update contains 8 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30#improvements-and-fixes-included-in-this-update" target="_blank">fixes <img src="embedded_images/external_link.png" alt="CU30fixes" style="vertical-align: middle; width: 16px; height: 16px;" /></a> that were issued after the release of SQL Server 2019 Cumulative Update 29, and it updates components in the following builds:
+KB5054833 - Cumulative Update 30 for SQL Server 2019
+This update contains 1 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate32#improvements-and-fixes-included-in-this-update" target="_blank">fixes <img src="embedded_images/external_link.png" alt="CU32fixes" style="vertical-align: middle; width: 16px; height: 16px;" /></a> that were issued after the release of SQL Server 2019 Cumulative Update 31, and it updates components in the following builds:
 
 
-- SQL Server - Product version: 15.0.4415.2, file version: 2019.150.4415.2
+- SQL Server - Product version: 15.0.4430.1, file version: 2019.150.4430.1
 - Analysis Services - Product version: 15.0.35.51, file version: 2018.150.35.51
 
 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30" target="_blank">`Learn more`<img src="embedded_images/external_link.png" alt="cumulative_update30" style="vertical-align: middle; width: 16px; height: 16px;" /></a>
 
 #### Microsoft OS Patch Level
 
-**KB2267602** - Security Intelligence Update  
-This update provides the latest security intelligence to enhance threat protection for Microsoft Defender Antivirus and other Microsoft antimalware. Updated components include advanced threat intelligence and vulnerability fixes issued after the prior update release.
-
-- **Release date:** December 29, 2024  
-- **Component version:** 1.421.1073.0
-
-For additional details visit the <a href="https://www.microsoft.com/en-us/wdsi/definitions/antimalware-definition-release-notes" target="_blank">Microsoft Security Intelligence Updates page<img src="embedded_images/external_link.png" alt="MSsecuritypage" style="vertical-align: middle; width: 16px; height: 16px;" /></a>.
+Windows Server 2019 Datacenter 10.0 <X64> (Build 17763: ) (Hypervisor) operating system is updated on the 18 July 2025
 
 
 ### Prerequisites
