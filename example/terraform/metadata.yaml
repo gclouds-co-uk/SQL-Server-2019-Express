@@ -8,7 +8,7 @@ metadata:
 spec:
   info:
     title: Google Cloud Marketplace Terraform Module
-    version: SQL2019EXP-2025Q1
+    version: SQL2019EXP-2025H2
     actuationTool:
       flavor: Terraform
       version: ">= 1.2"
@@ -26,13 +26,13 @@ spec:
           - title: SQL Version
             version: "15.0.2000.5"
           - title: SQL Patch Level
-            version: "15.0.4415.2"
+            version: "15.0.4430.1"
           - title: Type
-            version: "RTM-CU30"
+            version: "RTM-CU32"
           - title: SQL Server Management Studio
             version: "20.1"
           - title: Cumulative Update
-            version: "30"
+            version: "32"
   content: {}
   interfaces:
     variables:
@@ -47,7 +47,7 @@ spec:
       - name: source_image
         description: The image name for the disk for the VM instance.
         varType: string
-        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1735471171
+        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1752799347
       - name: zone
         description: The zone for the solution to be deployed.
         varType: string

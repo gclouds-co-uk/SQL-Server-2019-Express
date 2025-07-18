@@ -11,18 +11,18 @@ order: 3
 ---
 # Release Notes: SQL Server 2019 Express Edition
 
-*December 29, 2024*
+*July 18, 2025*
 
 ## Deployed Version
 
-- Package: SQL2019EXP-2025Q1
+- Package: SQL2019EXP-2025H2
 
 ## Major Updates
 
 ### Updates
 
-- SQL Server 2019 Express updated to Cumulative Update 30 (CU30)
-- Integrated December 2024 Windows Server security updates
+- SQL Server 2019 Express updated to Cumulative Update 32 (CU32)
+- Integrated 18 July 2025 Windows Server OS updates
 
 ## Product Infrastructure
 
@@ -46,7 +46,7 @@ No known issues at time of release.
 
 For technical support, contact gClouds Support Concierge:
 
-- [Support Portal](https://gcp.gclouds.co.uk/support.html)
+- [Support Portal](https://www.gclouds.co.uk/support)
 - [Documentation](./index)
 
 ## Resource Links
