@@ -20,8 +20,8 @@ spec:
           name: source_image
           title: Image version
           enumValueLabels:
-            - label: gclouds-win2019-sql2019-exp-1752799347
-              value: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1752799347
+            - label: gclouds-win2019-sql2019-exp-1763443235
+              value: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1763443235
           xGoogleProperty:
             type: ET_GCE_DISK_IMAGE
         machine_type:
@@ -31,8 +31,8 @@ spec:
             type: ET_GCE_MACHINE_TYPE
             zoneProperty: zone
             gceMachineType:
-              minCpu: 2
-              minRamGb: 8
+              minCpu: 4
+              minRamGb: 16
         boot_disk_type:
           name: boot_disk_type
           title: Boot disk type

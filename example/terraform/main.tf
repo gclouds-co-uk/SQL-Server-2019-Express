@@ -15,7 +15,7 @@ locals {
     os = "windows2019dc"
     sqlserver = "2019express"
     sql-patch = "cu32"
-    release = "2025H2"
+    release = "2025Q4"
     google-logging-enable = "0"
     google-monitoring-enable = "0"
   }

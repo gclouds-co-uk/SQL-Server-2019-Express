@@ -8,7 +8,7 @@ metadata:
 spec:
   info:
     title: Google Cloud Marketplace Terraform Module
-    version: SQL2019EXP-2025H2
+    version: SQL2019EXP-2025Q4
     actuationTool:
       flavor: Terraform
       version: ">= 1.2"
@@ -47,7 +47,7 @@ spec:
       - name: source_image
         description: The image name for the disk for the VM instance.
         varType: string
-        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1752799347
+        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1763443235
       - name: zone
         description: The zone for the solution to be deployed.
         varType: string
