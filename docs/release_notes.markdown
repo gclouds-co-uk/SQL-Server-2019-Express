@@ -11,6 +11,62 @@ order: 3
 ---
 # Release Notes: SQL Server 2019 Express Edition
 
+*November 18, 2025*
+
+## Deployed Version
+
+- Package: SQL2019EXP-2025Q4
+
+## Major Updates
+
+### Updates
+
+- SQL Server 2019 Express updated to Cumulative Update 32 (CU32) - KB5054833
+- SQL Server Management Studio (SSMS) updated to version 20.1
+- Integrated November 2025 Windows Server OS updates
+
+### Security
+
+- This release addresses the following CVEs:
+  - CVE-2016-9535
+  - CVE-2025-49708
+  - CVE-2025-53766
+  - CVE-2025-55234
+  - CVE-2025-59287
+
+## Product Infrastructure
+
+### Port Requirements
+
+- TCP port 1433 (SQL Server)
+- UDP port 1434 (SQL Browser)
+- TCP port 3389 (RDP)
+
+### System Requirements
+
+- vCPUs: 4 (minimum)
+- Memory: 16GB RAM
+- Storage: 80GB
+
+## Known Issues
+
+No known issues at time of release.
+
+## Support
+
+For technical support, contact gClouds Support Concierge:
+
+- [Support Portal](https://www.gclouds.co.uk/support)
+- [Documentation](./index)
+
+## Resource Links
+
+- [Product Page](./index)
+- [Quick Start Guide](./quickstart-guide)
+- [EULA](./EULA)
+
+# Release Notes: SQL Server 2019 Express Edition
+
 *July 18, 2025*
 
 ## Deployed Version
