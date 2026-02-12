@@ -11,6 +11,29 @@ order: 3
 ---
 # Release Notes: SQL Server 2019 Express Edition
 
+*February 12, 2026*
+
+## Deployed Version
+
+- Package: SQL2019EXP-2026Q1
+
+## Major Updates
+
+### Updates
+
+- Integrated February 2026 Windows Server OS updates for enhanced security and stability.
+- SQL Server 2019 Express remains at Cumulative Update 32 (CU32) - KB5054833.
+
+### Security
+
+- This release mitigates the following critical security vulnerabilities:
+  - **CVE-2024-55414** (Motorola SM56 Driver)
+  - **CVE-2025-6965** (SQLite/winsqlite3.dll)
+
+---
+
+# Release Notes: SQL Server 2019 Express Edition
+
 *November 18, 2025*
 
 ## Deployed Version
