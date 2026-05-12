@@ -20,8 +20,8 @@ spec:
           name: source_image
           title: Image version
           enumValueLabels:
-            - label: gclouds-win2019-sql2019-exp-1763443235
-              value: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1763443235
+            - label: gclouds-win2019-sql2019-exp-golden-1778549815
+              value: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-golden-1778549815
           xGoogleProperty:
             type: ET_GCE_DISK_IMAGE
         machine_type:
@@ -164,3 +164,5 @@ spec:
       suggestedActions:
         - heading: Quick Start Guide
           description: https://gclouds-co-uk.github.io/SQL-Server-2019-Express/quickstart-guide
+        - heading: Release Notes
+          description: https://gclouds-co-uk.github.io/SQL-Server-2019-Express/release-notes

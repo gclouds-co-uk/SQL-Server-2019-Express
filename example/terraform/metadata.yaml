@@ -8,7 +8,7 @@ metadata:
 spec:
   info:
     title: Google Cloud Marketplace Terraform Module
-    version: SQL2019EXP-2025Q4
+    version: SQL2019EXP-2026H2
     actuationTool:
       flavor: Terraform
       version: ">= 1.2"
@@ -17,7 +17,7 @@ spec:
       - type: SG_OS
         software:
           - title: Windows Server 
-            version: "Datacenter 2019"
+            version: "2019dcv20260429"
       - software:
           - title: Microsoft SQL Server
             version: "2019"
@@ -47,7 +47,7 @@ spec:
       - name: source_image
         description: The image name for the disk for the VM instance.
         varType: string
-        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-1763443235
+        defaultValue: projects/mpi-gclouds-public/global/images/gclouds-win2019-sql2019-exp-golden-1778549815
       - name: zone
         description: The zone for the solution to be deployed.
         varType: string
