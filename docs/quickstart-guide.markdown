@@ -55,14 +55,14 @@ You will have following within this bundle:
 
 #### SQL Patch Level
 
-KB5054833 - Cumulative Update 30 for SQL Server 2019
+KB5054833 - Cumulative Update 32 for SQL Server 2019
 This update contains 1 <a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate32#improvements-and-fixes-included-in-this-update" target="_blank">fixes <img src="embedded_images/external_link.png" alt="CU32fixes" style="vertical-align: middle; width: 16px; height: 16px;" /></a> that were issued after the release of SQL Server 2019 Cumulative Update 31, and it updates components in the following builds:
 
 
 - SQL Server - Product version: 15.0.4430.1, file version: 2019.150.4430.1
 - Analysis Services - Product version: 15.0.35.51, file version: 2018.150.35.51
 
-<a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate30" target="_blank">`Learn more`<img src="embedded_images/external_link.png" alt="cumulative_update30" style="vertical-align: middle; width: 16px; height: 16px;" /></a>
+<a href="https://learn.microsoft.com/en-us/troubleshoot/sql/releases/sqlserver-2019/cumulativeupdate32" target="_blank">`Learn more`<img src="embedded_images/external_link.png" alt="cumulative_update32" style="vertical-align: middle; width: 16px; height: 16px;" /></a>
 
 #### Microsoft OS Patch Level
 
