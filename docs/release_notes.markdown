@@ -11,64 +11,54 @@ order: 3
 ---
 # Release Notes: SQL Server 2019 Express Edition
 
-# Version SQL2019EXP-2026H2
+## Version SQL2019EXP-2026H2
+*May 12, 2026*
+
+### Key Changes and Updates
+
+#### Windows OS Update
+- **Base Image Update**: The Windows Server 2022 Datacenter base image has been updated to v20260429, including the latest security patches.
+
+#### Security Enhancements
+- **Fixed Common Vulnerabilities and Exposures (CVEs)**: 
+  - **CVE-2026-33824**: Mitigated via latest OS security patches.
+  - General vulnerabilities addressed through standard OS patching.
+
+# Version SQL2019EXP-2026Q1
+*February 12, 2026*
 
 ## Key Changes and Updates
 
-### 1. Windows OS Update
-- **Base Image Update**: The Windows Server 2022 Datacenter base image has been updated to v20260429, including the latest security patches.
-
-### 2. Security Enhancements
-- **Fixed Common Vulnerabilities and Exposures (CVEs)**: 
-  - CVE-2026-33824: Mitigated via latest OS security patches.
-  - General vulnerabilities addressed through standard OS patching.
-
-
-*February 12, 2026*
-
-## Deployed Version
-
-- Package: SQL2019EXP-2026Q1
-
-## Major Updates
-
-### Updates
+### Windows OS and SQL Server Updates
 
 - Integrated February 2026 Windows Server OS updates for enhanced security and stability.
 - SQL Server 2019 Express remains at Cumulative Update 32 (CU32) - KB5054833.
 
-### Security
+### Security Enhancements
 
 - This release mitigates the following critical security vulnerabilities:
   - **CVE-2024-55414** (Motorola SM56 Driver)
   - **CVE-2025-6965** (SQLite/winsqlite3.dll)
 
----
-
-# Release Notes: SQL Server 2019 Express Edition
-
+# Version SQL2019EXP-2025Q4
 *November 18, 2025*
 
-## Deployed Version
+### Key Changes and Updates
 
-- Package: SQL2019EXP-2025Q4
-
-## Major Updates
-
-### Updates
+### Windows OS and SQL Server Updates
 
 - SQL Server 2019 Express updated to Cumulative Update 32 (CU32) - KB5054833
 - SQL Server Management Studio (SSMS) updated to version 20.1
 - Integrated November 2025 Windows Server OS updates
 
-### Security
+### Security Enhancements
 
 - This release addresses the following CVEs:
-  - CVE-2016-9535
-  - CVE-2025-49708
-  - CVE-2025-53766
-  - CVE-2025-55234
-  - CVE-2025-59287
+  - **CVE-2016-9535**
+  - **CVE-2025-49708**
+  - **CVE-2025-53766**
+  - **CVE-2025-55234**
+  - **CVE-2025-59287**
 
 ## Product Infrastructure
 
