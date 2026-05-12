@@ -11,6 +11,19 @@ order: 3
 ---
 # Release Notes: SQL Server 2019 Express Edition
 
+# Version SQL2019EXP-2026H2
+
+## Key Changes and Updates
+
+### 1. Windows OS Update
+- **Base Image Update**: The Windows Server 2022 Datacenter base image has been updated to v20260429, including the latest security patches.
+
+### 2. Security Enhancements
+- **Fixed Common Vulnerabilities and Exposures (CVEs)**: 
+  - CVE-2026-33824: Mitigated via latest OS security patches.
+  - General vulnerabilities addressed through standard OS patching.
+
+
 *February 12, 2026*
 
 ## Deployed Version
